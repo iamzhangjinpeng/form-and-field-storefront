@@ -73,9 +73,9 @@ No Supabase account is needed. The catalog lives in `lib/products.ts`; the anony
 
 ## Deploy the static portfolio to GitHub Pages
 
-Pushes to `main` validate the source, run tests, check the production build, and export a static demo. They do not publish a website.
+Pushes to `main` run the checks, build the production app, export the static demo, and publish it to GitHub Pages. Ensure repository **Settings → Pages → Build and deployment → Source** is set to **GitHub Actions**.
 
-To publish later, select **GitHub Actions** in repository **Settings → Pages → Build and deployment**. Then open **Actions → Validate and deploy portfolio → Run workflow**, select **Publish to GitHub Pages**, and run it. Publishing is optional and disabled by default, so source-only portfolio repositories keep passing checks without enabling Pages.
+You can also run the workflow manually from **Actions → Validate and deploy portfolio → Run workflow** and select **Publish to GitHub Pages**. Manual runs default to checks only.
 
 ```sh
 npm run build:pages
