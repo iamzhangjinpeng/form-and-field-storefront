@@ -141,7 +141,7 @@ export function CheckoutForm() {
               />
             </label>
             <label>
-              Apartment, suite, etc. <span>(optional)</span>
+              Apartment, suite, etc. (optional)
               <input name="apartment" autoComplete="address-line2" maxLength={100} />
             </label>
             <div className="form-row">

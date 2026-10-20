@@ -184,7 +184,7 @@ fieldset {
 .desktop-nav {
   display: flex;
   gap: 32px;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.1px;
 }
 .desktop-nav a {
@@ -220,7 +220,7 @@ fieldset {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .bag-count {
   width: 20px;
@@ -257,7 +257,7 @@ fieldset {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.4;
   letter-spacing: 0.1px;
   transition:
@@ -278,7 +278,7 @@ fieldset {
   display: inline-flex;
   gap: 20px;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   border-bottom: 1px solid #919687;
   padding-bottom: 7px;
 }
@@ -309,7 +309,7 @@ fieldset {
   display: block;
 }
 .hero-description {
-  font-size: 12px;
+  font-size: 14px;
   color: #6f7469;
   line-height: 1.9;
   margin: 24px 0 28px;
@@ -501,7 +501,7 @@ fieldset {
   padding-top: 16px;
 }
 .product-meta h3 {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -509,12 +509,12 @@ fieldset {
   color: var(--clay);
 }
 .product-meta > span {
-  font-size: 11px;
+  font-size: 14px;
   white-space: nowrap;
   line-height: 1.7;
 }
 .product-meta p {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   margin-top: 7px;
 }
@@ -997,7 +997,7 @@ fieldset {
   padding-left: 8px;
 }
 .detail-description {
-  font-size: 13px;
+  font-size: 15px;
   color: #777b6e;
   line-height: 1.85;
   margin: 23px 0 27px;
@@ -1009,7 +1009,7 @@ fieldset {
   margin-bottom: 25px;
 }
 .option-group legend {
-  font-size: 11px;
+  font-size: 14px;
   margin-bottom: 13px;
 }
 .option-group legend span {
@@ -1040,7 +1040,7 @@ fieldset {
   gap: 8px;
 }
 .size-buttons button {
-  font-size: 10px;
+  font-size: 14px;
   padding: 11px 17px;
   border: 1px solid var(--line);
 }
@@ -1069,11 +1069,12 @@ fieldset {
   padding: 0 12px;
 }
 .quantity span {
-  font-size: 12px;
+  font-size: 15px;
   min-width: 15px;
   text-align: center;
 }
 .add-button {
+  font-size: 15px;
   flex: 1;
 }
 .added-link {
@@ -1089,7 +1090,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-size: 10px;
+  font-size: 13px;
   color: #7d8172;
   margin: 25px 0;
 }
@@ -1106,7 +1107,7 @@ fieldset {
   padding: 15px 0;
 }
 .product-accordions summary {
-  font-size: 11px;
+  font-size: 14px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -1123,7 +1124,7 @@ fieldset {
   content: '−';
 }
 .product-accordions p {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.8;
   margin-top: 13px;
@@ -1185,7 +1186,7 @@ fieldset {
 .shipping-progress {
   padding: 17px 20px;
   background: #edf0e5;
-  font-size: 11px;
+  font-size: 13px;
   color: #6a745b;
 }
 .shipping-progress > div {
@@ -1230,22 +1231,22 @@ fieldset {
 .cart-line h2 {
   font-family: Arial, sans-serif;
   letter-spacing: 0;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.6;
 }
 .cart-line-copy p {
-  font-size: 10px;
+  font-size: 13px;
   color: #888d7d;
   margin-top: 7px;
 }
 .cart-line-copy > span {
-  font-size: 10px;
+  font-size: 14px;
   display: block;
   margin-top: 7px;
 }
 .remove-link {
   padding: 0;
-  font-size: 9px;
+  font-size: 13px;
   color: #8b8f80;
   display: flex;
   align-items: center;
@@ -1256,7 +1257,7 @@ fieldset {
   color: #a14b37;
 }
 .line-total {
-  font-size: 11px;
+  font-size: 14px;
   text-align: right;
 }
 .cart-line .quantity {
@@ -1279,12 +1280,12 @@ fieldset {
 .summary-row {
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
-  color: #767d6a;
+  font-size: 14px;
+  color: #626c5a;
   margin-bottom: 18px;
 }
 .summary-row small {
-  font-size: 9px;
+  font-size: 12px;
 }
 .summary-total {
   border-top: 1px solid #d4d9c8;
@@ -1294,7 +1295,7 @@ fieldset {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 15px;
+  font-size: 18px;
 }
 .summary-total > span:last-child {
   font-size: 23px;
@@ -1303,13 +1304,13 @@ fieldset {
 .summary-total small {
   font-family: Arial, sans-serif;
   color: #8c9281;
-  font-size: 8px;
+  font-size: 12px;
   padding-right: 5px;
 }
 .order-summary > .button {
   display: flex;
   gap: 12px;
-  font-size: 11px;
+  font-size: 15px;
   padding: 17px 18px;
 }
 .secure-note {
@@ -1317,15 +1318,15 @@ fieldset {
   gap: 7px;
   align-items: center;
   justify-content: center;
-  font-size: 9px;
-  color: #828976;
+  font-size: 13px;
+  color: #626c5a;
   margin-top: 17px;
   line-height: 1.7;
 }
 .summary-fineprint {
-  font-size: 9px;
+  font-size: 13px;
   text-align: center;
-  color: #8d9281;
+  color: #626c5a;
   margin-top: 20px;
   line-height: 1.8;
 }
@@ -1344,8 +1345,8 @@ fieldset {
   display: flex;
   align-items: center;
   gap: 15px;
-  font-size: 9px;
-  color: #9a9e90;
+  font-size: 13px;
+  color: #626c5a;
   margin-top: 27px;
 }
 .checkout-steps > span:first-child {
@@ -1377,18 +1378,18 @@ fieldset {
 .form-section h2 {
   font-family: Arial, sans-serif;
   letter-spacing: 0;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 15px;
 }
 .form-section h2 > span {
-  font-size: 9px;
+  font-size: 12px;
   color: #929785;
   margin-right: 10px;
 }
 .form-section > p {
-  font-size: 10px;
-  color: #8e9385;
+  font-size: 14px;
+  color: #626c5a;
   margin-bottom: 22px;
 }
 .form-section label {
@@ -1396,9 +1397,10 @@ fieldset {
   flex-direction: column;
   align-items: flex-start;
   gap: 9px;
-  font-size: 10px;
+  font-size: 14px;
   margin-bottom: 17px;
   width: 100%;
+  line-height: 1.5;
 }
 .form-section label > span {
   display: inline;
@@ -1407,20 +1409,29 @@ fieldset {
 .form-section input,
 .form-section select {
   padding: 13px 14px;
-  height: 43px;
-  font-size: 12px;
+  height: 52px;
+  font-size: 16px;
   border: 1px solid #d7dbcd;
   background: transparent;
   width: 100%;
   color: var(--ink);
+  min-width: 0;
 }
 .form-section input::placeholder {
-  color: #a2a697;
+  color: #76806f;
 }
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 17px;
+  align-items: end;
+  margin-bottom: 20px;
+}
+.form-row label {
+  margin-bottom: 0;
+}
+.form-row:last-child {
+  margin-bottom: 0;
 }
 .form-section label:last-child {
   margin-bottom: 0;
@@ -1438,14 +1449,18 @@ fieldset {
   display: flex;
   align-items: center;
   gap: 11px;
+  flex-wrap: wrap;
 }
 .payment-panel h2 {
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 0;
   font-family: Arial, sans-serif;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.5;
 }
 .payment-panel-title > span {
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: 1px;
   background: #dce2cf;
   color: #6d795b;
@@ -1453,14 +1468,18 @@ fieldset {
   margin-left: auto;
 }
 .payment-panel > p {
-  font-size: 10px;
-  color: #7c8470;
+  font-size: 14px;
+  color: #626c5a;
   margin-top: 13px;
   line-height: 1.9;
 }
 .checkout-submit {
+  font-size: 16px;
   width: 100%;
   display: flex;
+  min-height: 56px;
+  gap: 14px;
+  font-weight: 500;
 }
 .checkout-submit:disabled {
   transform: none;
@@ -1471,7 +1490,8 @@ fieldset {
   padding-bottom: 5px;
 }
 .summary-items > div {
-  display: flex;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
   align-items: center;
   gap: 13px;
   margin-bottom: 20px;
@@ -1484,25 +1504,26 @@ fieldset {
 }
 .summary-items > div > div {
   flex: 1;
+  min-width: 0;
 }
 .summary-items span {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.6;
 }
 .summary-items small {
   display: block;
-  color: #8f9584;
-  font-size: 8px;
+  color: #626c5a;
+  font-size: 13px;
   line-height: 1.8;
   margin-top: 6px;
 }
 .summary-items > div > span:last-child {
-  font-size: 10px;
+  font-size: 14px;
   white-space: nowrap;
 }
 .info-note,
 .error-note {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
   padding: 15px 20px;
   margin-bottom: 23px;
@@ -1548,8 +1569,8 @@ fieldset {
 .success-intro {
   max-width: 405px;
   margin: 0 auto;
-  font-size: 12px;
-  color: #838979;
+  font-size: 15px;
+  color: #626c5a;
   line-height: 1.85;
 }
 .receipt {
@@ -1563,7 +1584,7 @@ fieldset {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 10px;
+  font-size: 14px;
   margin-bottom: 17px;
 }
 .receipt > div:last-child {
@@ -1574,18 +1595,18 @@ fieldset {
 }
 .receipt strong {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 15px;
 }
 .receipt-status {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 9px;
+  font-size: 13px;
   color: #627450;
 }
 .success-note {
-  font-size: 10px;
-  color: #8e9582;
+  font-size: 14px;
+  color: #626c5a;
   line-height: 1.85;
   margin: 21px 0 25px;
 }
@@ -1616,14 +1637,15 @@ fieldset {
     font-size: 95px;
   }
   .product-meta h3 {
-    font-size: 14px;
+    font-size: 15px;
   }
   .product-meta > span {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 @media (max-width: 1100px) {
   .desktop-nav {
+    font-size: 14px;
     gap: 20px;
   }
   .header {
@@ -1646,7 +1668,7 @@ fieldset {
     font-size: 61px;
   }
   .hero-description {
-    font-size: 11px;
+    font-size: 14px;
   }
   .product-grid {
     gap: 17px;
@@ -1655,6 +1677,7 @@ fieldset {
     display: block;
   }
   .product-meta > span {
+    font-size: 14px;
     display: block;
     margin-top: 8px;
   }
@@ -1710,7 +1733,7 @@ fieldset {
 @media (max-width: 800px) {
   .desktop-nav {
     gap: 15px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .wordmark {
     font-size: 21px;
@@ -1746,7 +1769,7 @@ fieldset {
     font-size: 11px;
   }
   .hero-description {
-    font-size: 10px;
+    font-size: 14px;
   }
   .hero-bottom {
     font-size: 6px;
@@ -1858,6 +1881,7 @@ fieldset {
     display: flex;
   }
   .product-meta > span {
+    font-size: 14px;
     margin-top: 0;
   }
   .detail-copy h1 {
@@ -1873,13 +1897,13 @@ fieldset {
     padding-top: 8px;
   }
   .detail-description {
-    font-size: 11px;
+    font-size: 15px;
   }
   .add-row {
     gap: 8px;
   }
   .add-button {
-    font-size: 10px;
+    font-size: 15px;
     padding: 15px;
   }
   .quantity {
@@ -1906,8 +1930,8 @@ fieldset {
     gap: 20px;
   }
   .checkout-layout {
-    grid-template-columns: 1.3fr 1fr;
-    gap: 5%;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
   .checkout-layout > .order-summary {
     margin-top: 0;
@@ -1921,8 +1945,9 @@ fieldset {
     flex-basis: calc(100% - 65px);
   }
   .summary-items > div > span:last-child {
-    padding-left: 65px;
-    margin-top: -8px;
+    font-size: 14px;
+    padding-left: 0;
+    margin-top: 0;
   }
   .checkout-title h1 {
     font-size: 44px;
@@ -1956,6 +1981,7 @@ fieldset {
     font-size: 19px;
   }
   .desktop-nav {
+    font-size: 14px;
     display: none;
   }
   .header-actions {
@@ -1965,6 +1991,7 @@ fieldset {
     display: none;
   }
   .bag-link {
+    font-size: 14px;
     gap: 6px;
   }
   .bag-count {
@@ -2020,7 +2047,7 @@ fieldset {
     display: inline;
   }
   .hero-description {
-    font-size: 11px;
+    font-size: 14px;
     margin: 20px 0 23px;
     line-height: 1.85;
   }
@@ -2124,14 +2151,14 @@ fieldset {
     display: block;
   }
   .product-meta h3 {
-    font-size: 11px;
+    font-size: 15px;
   }
   .product-meta p {
-    font-size: 8px;
+    font-size: 12px;
     margin-top: 5px;
   }
   .product-meta > span {
-    font-size: 10px;
+    font-size: 14px;
     display: block;
     margin-top: 6px;
   }
@@ -2390,7 +2417,7 @@ fieldset {
     font-size: 23px;
   }
   .detail-description {
-    font-size: 12px;
+    font-size: 15px;
     margin: 21px 0 25px;
     padding-bottom: 22px;
   }
@@ -2398,7 +2425,7 @@ fieldset {
     margin-bottom: 25px;
   }
   .option-group legend {
-    font-size: 11px;
+    font-size: 14px;
   }
   .swatches button {
     height: 31px;
@@ -2406,7 +2433,7 @@ fieldset {
   }
   .size-buttons button {
     padding: 12px 19px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .add-row {
     margin-top: 27px;
@@ -2417,15 +2444,15 @@ fieldset {
     height: 50px;
   }
   .add-button {
-    font-size: 12px;
+    font-size: 15px;
     padding: 16px 22px;
   }
   .delivery-notes {
-    font-size: 10px;
+    font-size: 13px;
     margin: 25px 0;
   }
   .product-accordions summary {
-    font-size: 11px;
+    font-size: 14px;
   }
   .related {
     padding-top: 50px;
@@ -2470,19 +2497,19 @@ fieldset {
     grid-row: 1;
   }
   .cart-line h2 {
-    font-size: 11px;
+    font-size: 15px;
     padding-right: 0;
   }
   .cart-line-copy p {
-    font-size: 8px;
+    font-size: 13px;
     margin-top: 5px;
   }
   .cart-line-copy > span {
-    font-size: 9px;
+    font-size: 14px;
     margin-top: 4px;
   }
   .remove-link {
-    font-size: 8px;
+    font-size: 13px;
     margin-top: 8px;
   }
   .cart-line .quantity {
@@ -2497,12 +2524,12 @@ fieldset {
     padding: 0 8px;
   }
   .cart-line .quantity span {
-    font-size: 10px;
+    font-size: 14px;
   }
   .line-total {
     grid-column: 3;
     grid-row: 1;
-    font-size: 10px;
+    font-size: 14px;
     padding-top: 2px;
   }
   .cart-table-head {
@@ -2513,7 +2540,7 @@ fieldset {
     display: none;
   }
   .shipping-progress {
-    font-size: 10px;
+    font-size: 13px;
     padding: 15px 17px;
   }
   .back-shop {
@@ -2530,20 +2557,20 @@ fieldset {
     margin-bottom: 26px;
   }
   .summary-row {
-    font-size: 11px;
+    font-size: 14px;
   }
   .summary-total {
-    font-size: 15px;
+    font-size: 18px;
   }
   .order-summary > .button {
-    font-size: 12px;
+    font-size: 15px;
     padding: 17px 20px;
   }
   .checkout-page {
     padding-top: 25px;
   }
   .checkout-page > .text-link {
-    font-size: 10px;
+    font-size: 14px;
     gap: 8px;
   }
   .checkout-title {
@@ -2551,7 +2578,7 @@ fieldset {
     margin-bottom: 31px;
   }
   .checkout-title > .eyebrow {
-    font-size: 8px;
+    font-size: 11px;
   }
   .checkout-title h1 {
     font-size: 43px;
@@ -2563,9 +2590,16 @@ fieldset {
     display: block;
   }
   .checkout-steps {
-    font-size: 8px;
+    font-size: 13px;
     gap: 9px;
     margin-top: 24px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1.4fr);
+    align-items: start;
+    line-height: 1.6;
+  }
+  .checkout-steps .step-line {
+    display: none;
   }
   .step-line {
     width: 20px;
@@ -2573,6 +2607,7 @@ fieldset {
   .checkout-layout {
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
   .checkout-form {
     order: 2;
@@ -2594,11 +2629,13 @@ fieldset {
     flex-wrap: nowrap;
     gap: 13px;
     margin-bottom: 17px;
+    grid-template-columns: 47px minmax(0, 1fr) auto;
   }
   .summary-items > div > div {
     flex-basis: auto;
   }
   .summary-items > div > span:last-child {
+    font-size: 14px;
     margin-top: 0;
     padding-left: 0;
   }
@@ -2607,14 +2644,14 @@ fieldset {
     height: 57px;
   }
   .summary-items small {
-    font-size: 8px;
+    font-size: 13px;
     margin-top: 4px;
   }
   .summary-items {
     margin-bottom: 20px;
   }
   .checkout-layout .summary-row {
-    font-size: 10px;
+    font-size: 14px;
     margin-bottom: 13px;
   }
   .checkout-layout .summary-total {
@@ -2628,16 +2665,16 @@ fieldset {
     display: none;
   }
   .form-section h2 {
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 17px;
   }
   .form-section label {
-    font-size: 10px;
+    font-size: 14px;
   }
   .form-section input,
   .form-section select {
-    height: 46px;
-    font-size: 12px;
+    height: 52px;
+    font-size: 16px;
   }
   .form-row {
     gap: 12px;
@@ -2653,17 +2690,17 @@ fieldset {
     gap: 9px;
   }
   .payment-panel h2 {
-    font-size: 12px;
+    font-size: 16px;
   }
   .payment-panel > p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .payment-panel-title > span {
-    font-size: 7px;
+    font-size: 11px;
   }
   .checkout-submit {
-    font-size: 12px;
-    min-height: 52px;
+    font-size: 16px;
+    min-height: 56px;
   }
   .success-page {
     padding: 50px 7%;
@@ -2676,7 +2713,7 @@ fieldset {
     letter-spacing: 1.7px;
   }
   .success-intro {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 320px;
   }
   .receipt {
@@ -2685,19 +2722,19 @@ fieldset {
     margin-top: 27px;
   }
   .receipt > div {
-    font-size: 9px;
+    font-size: 14px;
   }
   .receipt strong {
-    font-size: 11px;
+    font-size: 15px;
   }
   .receipt-status {
-    font-size: 8px;
+    font-size: 13px;
   }
   .success-note {
-    font-size: 9px;
+    font-size: 14px;
   }
   .success-page > .button {
-    font-size: 11px;
+    font-size: 15px;
   }
   .success-signoff {
     font-size: 18px;
@@ -2725,6 +2762,12 @@ fieldset {
   }
   .policy-modal > p:not(.eyebrow) {
     font-size: 12px;
+  }
+}
+@media (max-width: 420px) {
+  .form-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
