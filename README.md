@@ -6,7 +6,9 @@ A warm, editorial ecommerce storefront for a fictional homewares brand. Built to
 
 **Next.js App Router · TypeScript · React · Tailwind CSS · Stripe Checkout**
 
-![FORM & FIELD storefront](docs/images/cover.png)
+![Recorded walkthrough of the FORM & FIELD storefront, from browsing the collection through placing a demo order](docs/images/storefront-walkthrough.gif)
+
+*A real browser walkthrough: discover a product, choose its finish and size, review the bag, and complete guest checkout. The order is simulated; no payment is taken.*
 
 ## Try the experience
 
