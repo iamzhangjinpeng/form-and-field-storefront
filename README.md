@@ -71,7 +71,9 @@ No Supabase account is needed. The catalog lives in `lib/products.ts`; the anony
 
 ## Deploy the static portfolio to GitHub Pages
 
-In repository **Settings → Pages → Build and deployment**, select **GitHub Actions**. Push to `main` or run **Validate and deploy portfolio** manually. The workflow tests the order logic, checks a full Next.js production build, exports a static demo, and deploys the artifact.
+Pushes to `main` validate the source, run tests, check the production build, and export a static demo. They do not publish a website.
+
+To publish later, select **GitHub Actions** in repository **Settings → Pages → Build and deployment**. Then open **Actions → Validate and deploy portfolio → Run workflow**, select **Publish to GitHub Pages**, and run it. Publishing is optional and disabled by default, so source-only portfolio repositories keep passing checks without enabling Pages.
 
 ```sh
 npm run build:pages

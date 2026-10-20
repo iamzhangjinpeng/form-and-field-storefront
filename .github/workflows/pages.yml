@@ -3,10 +3,14 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish to GitHub Pages (enable Pages in repository settings first)
+        required: false
+        type: boolean
+        default: false
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -27,8 +31,12 @@ jobs:
         with:
           path: out
   deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish }}
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
