@@ -6,9 +6,9 @@ A warm, editorial ecommerce storefront for a fictional homewares brand. Built to
 
 **Next.js App Router · TypeScript · React · Tailwind CSS · Stripe Checkout**
 
-![Recorded walkthrough of the FORM & FIELD storefront, from browsing the collection through placing a demo order](docs/images/storefront-walkthrough.gif)
+![Animated preview of the FORM & FIELD home page, collection, and product detail](docs/images/storefront-preview.gif)
 
-_A real browser walkthrough: discover a product, choose its finish and size, review the bag, and complete guest checkout. The order is simulated; no payment is taken._
+_Storefront preview: browse the collection and explore product options. The public demo continues to Stripe Checkout in test mode; use the test card below to try it. No real payment is taken._
 
 ## Try the experience
 
@@ -110,9 +110,11 @@ The public demo currently has Stripe test payments enabled through Supabase Edge
 | ---------------------------------------------- | ------------------------------------------- |
 | ![Product catalog](docs/images/collection.png) | ![Product options](docs/images/product.png) |
 
-| Guest checkout                              | Order confirmation                                  |
-| ------------------------------------------- | --------------------------------------------------- |
-| ![Guest checkout](docs/images/checkout.png) | ![Demo order confirmation](docs/images/success.png) |
+| Local demo checkout                              | Local demo order confirmation                                  |
+| ------------------------------------------------- | --------------------------------------------------------------- |
+| ![Local no-key demo checkout](docs/images/checkout.png) | ![Local no-key demo confirmation](docs/images/success.png) |
+
+These two screenshots show the no-key local fallback. On the public demo, checkout continues to Stripe's hosted test payment page instead.
 
 <details>
 <summary>Mobile storefront</summary>
