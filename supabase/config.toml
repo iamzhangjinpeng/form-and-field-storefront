@@ -1,0 +1,7 @@
+project_id = "form-and-field-storefront"
+
+[functions.checkout]
+verify_jwt = false
+
+[functions.session]
+verify_jwt = false

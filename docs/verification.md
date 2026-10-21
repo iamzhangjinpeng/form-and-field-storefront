@@ -10,9 +10,10 @@ Verified on October 21, 2026.
 - Recorded the README walkthrough in a real 1440px desktop browser, from home and product options through the bag, guest checkout, and demo confirmation. The optimized 960×600 animation is in `docs/images/storefront-walkthrough.gif`.
 - Confirmed that visiting an old success page does not discard a newly started bag and that a direct success-page visit without an order does not display a false confirmation.
 - GitHub Pages deployment passed in [GitHub Actions run 5](https://github.com/iamzhangjinpeng/form-and-field-storefront/actions/runs/39433376340). The public homepage and bundled hero image both returned HTTP 200.
+- Supabase Edge Function handlers now mirror server-side product and checkout validation, create test Checkout Sessions, and verify paid sessions. Automated tests cover catalog parity, prices, shipping, and invalid checkout data.
 
 Screenshots are in `docs/images/`. Inputs in screenshots and browser scripts are fictional.
 
 ## Remaining integration acceptance checks
 
-No Stripe test account or secret was supplied. The server integration is implemented, but an actual hosted Stripe test payment has **not** been executed. GitHub Pages uses the static demo checkout; use Vercel or another Node.js host with `STRIPE_SECRET_KEY` and `SITE_URL` configured to complete the test-card acceptance check. See [the outstanding work list](TODO.zh-CN.md).
+An actual hosted Stripe test payment has **not** yet been executed. The Pages workflow deploys Supabase functions only when `SUPABASE_ACCESS_TOKEN` and the Supabase URL repository variable are configured; the website remains in demo mode until that deployment succeeds. Configure `STRIPE_SECRET_KEY` and `SITE_URL` in Supabase Function Secrets, then follow [the outstanding work list](TODO.zh-CN.md).

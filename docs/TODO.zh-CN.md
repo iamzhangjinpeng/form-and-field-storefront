@@ -1,11 +1,12 @@
 # 项目待办
 
-截至 2026-10-21。当前 GitHub Pages 演示站已上线，可走完整的模拟购买流程；待办集中在产品文档要求的 Stripe 测试支付，以及素材来源的可选对齐。
+截至 2026-10-21。GitHub Pages 站点已上线，Supabase Edge Functions 支付接入代码已加入。待办是配置 Supabase 部署凭据并完成一次 Stripe 测试付款，以及素材来源的可选对齐。
 
 ## 完成产品文档中的真实支付验收
 
-- [ ] 将 Next.js 全栈版本部署到 Vercel（或支持 Node.js 服务端接口的托管平台）。GitHub Pages 继续作为零密钥演示站。
-- [ ] 在托管平台安全配置 Stripe 测试密钥 `STRIPE_SECRET_KEY` 和站点地址 `SITE_URL`。只配置测试密钥，不要放进 GitHub 或 `NEXT_PUBLIC_` 变量。
+- [ ] 在 GitHub 仓库 Actions Secrets 添加 `SUPABASE_ACCESS_TOKEN`，让部署工作流可自动发布 Supabase Edge Functions。
+- [ ] 在 Supabase Edge Function Secrets 确认 `STRIPE_SECRET_KEY`（仅测试密钥）和 `SITE_URL=https://iamzhangjinpeng.github.io/form-and-field-storefront` 已配置。
+- [ ] 重新运行 GitHub Actions，确认 checkout/session 两个 Edge Functions 部署成功，随后 Pages 构建识别 Supabase Variables 并切换到 Stripe 测试模式。
 - [ ] 使用测试卡 `4242 4242 4242 4242` 完成一次托管支付，确认服务端验证成功后显示订单成功页；再验证取消返回结账页且购物车保留。
 
 ## 可选的素材对齐

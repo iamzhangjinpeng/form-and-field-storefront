@@ -8,14 +8,13 @@ A warm, editorial ecommerce storefront for a fictional homewares brand. Built to
 
 ![Recorded walkthrough of the FORM & FIELD storefront, from browsing the collection through placing a demo order](docs/images/storefront-walkthrough.gif)
 
-*A real browser walkthrough: discover a product, choose its finish and size, review the bag, and complete guest checkout. The order is simulated; no payment is taken.*
+_A real browser walkthrough: discover a product, choose its finish and size, review the bag, and complete guest checkout. The order is simulated; no payment is taken._
 
 ## Try the experience
 
 Browse eight objects across furniture, ceramics, textiles, and lighting. Search or filter the collection, choose product variants, add an item to your bag, and place a clearly labeled demo order. It takes about two minutes; no account or payment card is needed.
 
-- **Public demo target:** [FORM & FIELD on GitHub Pages](https://iamzhangjinpeng.github.io/form-and-field-storefront/) — published when GitHub Pages is enabled and the included deployment workflow succeeds.
-- **Full-stack deployment:** import this repository into Vercel to enable the server-side Stripe integration. A test secret key is required for actual Stripe test payments.
+- **Public demo target:** [FORM & FIELD on GitHub Pages](https://iamzhangjinpeng.github.io/form-and-field-storefront/) — the included workflow can publish either the no-card demo or Stripe test checkout backed by Supabase Edge Functions.
 
 > This is a portfolio concept. Products, prices, policies, and brand details are illustrative. No real money is charged, no emails are sent, and no products are shipped.
 
@@ -62,14 +61,17 @@ This demo deliberately has no inventory, fulfillment system, customer accounts, 
 
 See [Stripe’s Checkout documentation](https://docs.stripe.com/payments/checkout/quickstarts) for the hosted-payment integration.
 
-## Deploy to Vercel
+## Enable Stripe test payments on GitHub Pages
 
-1. Import this GitHub repository into Vercel.
-2. Keep the detected **Next.js** preset, `npm run build`, and default output settings.
-3. Deploy without secrets for demo mode, or add a Stripe test key and `SITE_URL` for test payments.
-4. Redeploy after setting the final `SITE_URL`.
+The public site is static, so it cannot run the Next.js API routes. The browser calls the Supabase Edge Functions in `supabase/functions/` instead. The functions validate cart variants and prices on the server, create a hosted Stripe Checkout Session, and retrieve the session before confirming success.
 
-No Supabase account is needed. The catalog lives in `lib/products.ts`; the anonymous shopping bag uses browser storage, as allowed by the product brief.
+1. In Supabase, add `STRIPE_SECRET_KEY` as an Edge Function secret. Use a Stripe test/sandbox key only.
+2. Add `SITE_URL=https://iamzhangjinpeng.github.io/form-and-field-storefront` as an Edge Function secret. The function uses this for Stripe return URLs and CORS origin validation.
+3. In GitHub **Settings → Secrets and variables → Actions**, add repository variables `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`.
+4. Create a Supabase access token and add it as the GitHub Actions repository secret `SUPABASE_ACCESS_TOKEN`. On the next workflow run, it derives the project reference from `NEXT_PUBLIC_SUPABASE_URL`, deploys both Edge Functions, then builds Pages with the public Supabase configuration.
+5. Use `4242 4242 4242 4242`, any future expiry, and any three-digit CVC to test. A blank Stripe secret or missing deployment credentials keeps the public Pages build in clearly labeled demo mode.
+
+The Stripe secret remains in Supabase and never enters GitHub or the frontend. Supabase's publishable key is intended for browser use. Do not add Stripe live keys. Supabase Functions are configured as public endpoints, so they validate request origins, checkout fields, product variants and server-owned prices. Add durable orders, signed webhooks, idempotent fulfillment and rate limits before adapting this portfolio code for real sales.
 
 ## Deploy the static portfolio to GitHub Pages
 
@@ -81,7 +83,7 @@ You can also run the workflow manually from **Actions → Validate and deploy po
 npm run build:pages
 ```
 
-The exporter removes server API routes from the static build and restores them afterward. Static checkout is explicitly simulated; GitHub Pages cannot run Stripe server routes. The default path is `/form-and-field-storefront`. Override `NEXT_PUBLIC_BASE_PATH` when using another repository name or a custom domain. Do not run the normal and static builds concurrently.
+The exporter removes server API routes from the static build and restores them afterward. If the Supabase browser variables are available at build time, the static checkout calls Supabase; otherwise it is explicitly simulated. The default path is `/form-and-field-storefront`. Override `NEXT_PUBLIC_BASE_PATH` when using another repository name or a custom domain. Do not run the normal and static builds concurrently.
 
 ## Verification
 
@@ -100,7 +102,7 @@ npm run test:e2e
 
 Set `TEST_URL` for another server, or `PLAYWRIGHT_EXECUTABLE_PATH` for an existing Chromium installation. The browser script exercises catalog filtering/search, product options, cart persistence, quantities, checkout, success handling, mobile navigation, and layouts at 390px and 320px. It saves screenshots in `docs/images/`.
 
-Actual Stripe payment execution requires your own Stripe sandbox credentials and is a separate manual acceptance check. No live payment credentials are included in this repository.
+Actual Stripe test payment execution requires the Supabase project secret and deployment access token to be configured. No payment credentials are included in this repository.
 
 ## A closer look
 

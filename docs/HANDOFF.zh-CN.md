@@ -25,4 +25,4 @@ npm run dev
 
 GitHub Pages 适合零密钥公开展示，只能运行演示结算。Vercel 运行完整 Next.js 服务端，可接入 Stripe 测试支付。部署步骤见英文 README，剩余验收项见 [项目待办](TODO.zh-CN.md)。
 
-本项目不含后台、真实库存物流、账号系统或生产订单数据库。Stripe 真实测试支付是否验收通过，取决于后续接入自己的测试账号并实际完成支付，不能把演示确认当作 Stripe 实测。
+本项目不含后台、真实库存物流、账号系统或生产订单数据库。GitHub Actions 可部署 Supabase `checkout` 与 `session` Edge Functions；添加 `SUPABASE_ACCESS_TOKEN` Actions Secret 后会随 Pages 工作流部署。Stripe 测试密钥和站点地址应保存在 Supabase Function Secrets 中。实际测试支付尚需部署后手动验收，不能把演示确认当作 Stripe 实测。

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Check, ArrowRight, Flower2 } from 'lucide-react';
 import { useStore } from './store-provider';
 import { asset, money } from '@/lib/products';
+import { hasSupabasePaymentApi, paymentApiHeaders, sessionApiUrl } from '@/lib/payment-api';
 type Receipt = { mode: string; reference: string; total: number; createdAt?: number };
 export function Success() {
   const params = useSearchParams();
@@ -33,9 +34,10 @@ export function Success() {
           const id = params.get('session_id');
           if (!id || process.env.NEXT_PUBLIC_STATIC_DEMO === 'true')
             throw new Error('There’s no completed order to show yet.');
-          const response = await fetch(`${asset('/api/session')}?id=${encodeURIComponent(id)}`, {
-            cache: 'no-store',
-          });
+          const response = await fetch(
+            hasSupabasePaymentApi ? sessionApiUrl(id) : asset(sessionApiUrl(id)),
+            { cache: 'no-store', headers: paymentApiHeaders() },
+          );
           const result = await response.json();
           if (!response.ok || !result.paid)
             throw new Error(result.error || 'Your payment has not been verified.');

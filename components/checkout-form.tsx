@@ -7,6 +7,7 @@ import { useStore } from './store-provider';
 import { EmptyBag, OrderSummary } from './cart';
 import { countries, validateCheckout } from '@/lib/checkout';
 import { asset, shippingCost } from '@/lib/products';
+import { checkoutApiUrl, hasSupabasePaymentApi, paymentApiHeaders } from '@/lib/payment-api';
 type Mode = 'loading' | 'demo' | 'stripe' | 'unavailable';
 export function CheckoutForm() {
   const { lines, ready, subtotal } = useStore();
@@ -20,7 +21,11 @@ export function CheckoutForm() {
   useEffect(() => {
     if (process.env.NEXT_PUBLIC_STATIC_DEMO === 'true') return;
     const controller = new AbortController();
-    fetch(asset('/api/checkout'), { signal: controller.signal, cache: 'no-store' })
+    fetch(hasSupabasePaymentApi ? checkoutApiUrl() : asset(checkoutApiUrl()), {
+      signal: controller.signal,
+      cache: 'no-store',
+      headers: paymentApiHeaders(),
+    })
       .then((r) => {
         if (!r.ok) throw new Error();
         return r.json();
@@ -41,11 +46,14 @@ export function CheckoutForm() {
       const payload = validateCheckout({ ...form, lines });
       let result: { mode: string; url?: string; error?: string } = { mode: 'demo' };
       if (process.env.NEXT_PUBLIC_STATIC_DEMO !== 'true') {
-        const response = await fetch(asset('/api/checkout'), {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        });
+        const response = await fetch(
+          hasSupabasePaymentApi ? checkoutApiUrl() : asset(checkoutApiUrl()),
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', ...paymentApiHeaders() },
+            body: JSON.stringify(payload),
+          },
+        );
         result = await response.json();
         if (!response.ok)
           throw new Error(result.error || 'Something went wrong. Please try again.');
