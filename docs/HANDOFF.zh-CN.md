@@ -21,8 +21,8 @@ npm run dev
 
 ## 给客户展示
 
-优先分享部署完成后的网站链接，并补充 GitHub 仓库链接。推荐演示路径：首页 → 商品列表 → 商品详情 → 选颜色/规格 → 加购 → 购物车改数量 → 填写虚构收货信息 → 演示确认。
+在线演示：[FORM & FIELD](https://iamzhangjinpeng.github.io/form-and-field-storefront/)；源码：[GitHub 仓库](https://github.com/iamzhangjinpeng/form-and-field-storefront)。推荐演示路径：首页 → 商品列表 → 商品详情 → 选颜色/规格 → 加购 → 购物车改数量 → 填写虚构收货信息 → 演示确认。
 
-GitHub Pages 适合零密钥公开展示，只能运行演示结算。Vercel 运行完整 Next.js 服务端，可接入 Stripe 测试支付。部署步骤见英文 README。
+GitHub Pages 适合零密钥公开展示，只能运行演示结算。Vercel 运行完整 Next.js 服务端，可接入 Stripe 测试支付。部署步骤见英文 README，剩余验收项见 [项目待办](TODO.zh-CN.md)。
 
 本项目不含后台、真实库存物流、账号系统或生产订单数据库。Stripe 真实测试支付是否验收通过，取决于后续接入自己的测试账号并实际完成支付，不能把演示确认当作 Stripe 实测。
