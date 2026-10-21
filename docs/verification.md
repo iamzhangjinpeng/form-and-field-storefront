@@ -11,9 +11,12 @@ Verified on October 21, 2026.
 - Confirmed that visiting an old success page does not discard a newly started bag and that a direct success-page visit without an order does not display a false confirmation.
 - GitHub Pages deployment passed in [GitHub Actions run 5](https://github.com/iamzhangjinpeng/form-and-field-storefront/actions/runs/39433376340). The public homepage and bundled hero image both returned HTTP 200.
 - Supabase Edge Function handlers now mirror server-side product and checkout validation, create test Checkout Sessions, and verify paid sessions. Automated tests cover catalog parity, prices, shipping, and invalid checkout data.
+- GitHub Actions deployment [run 9](https://github.com/iamzhangjinpeng/form-and-field-storefront/actions/runs/39571306616) completed successfully: both Supabase Edge Functions deployed, tests and static build passed, and GitHub Pages published.
+- A hosted Stripe Sandbox payment was completed in a real browser with the standard `4242` test card. The success page verified the paid Checkout Session and displayed the $337.00 test total; Stripe confirmed no real payment was taken.
+- A later clean navigation to the public checkout displayed `Stripe · test mode`. A new Checkout Session opened the hosted Stripe sandbox page. Clicking Stripe's return link brought the browser back to `/checkout/?cancelled=true`, displayed the unpaid status message, and preserved the one-item bag. Submitting the same fictional details again opened a fresh Stripe sandbox session, confirming retry works. No second payment was submitted.
 
 Screenshots are in `docs/images/`. Inputs in screenshots and browser scripts are fictional.
 
-## Remaining integration acceptance checks
+## Remaining acceptance checks
 
-An actual hosted Stripe test payment has **not** yet been executed. The Pages workflow deploys Supabase functions only when `SUPABASE_ACCESS_TOKEN` and the Supabase URL repository variable are configured; the website remains in demo mode until that deployment succeeds. Configure `STRIPE_SECRET_KEY` and `SITE_URL` in Supabase Function Secrets, then follow [the outstanding work list](TODO.zh-CN.md).
+The Stripe cancel-and-retry path passed in the public browser test. No payment was submitted during that test. See [the outstanding work list](TODO.zh-CN.md). Production commerce needs a separate scope for durable orders, signed webhooks, idempotent fulfillment, tax handling, and abuse controls; these are intentionally outside this portfolio demo.

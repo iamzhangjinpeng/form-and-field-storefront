@@ -12,7 +12,7 @@ _A real browser walkthrough: discover a product, choose its finish and size, rev
 
 ## Try the experience
 
-Browse eight objects across furniture, ceramics, textiles, and lighting. Search or filter the collection, choose product variants, add an item to your bag, and place a clearly labeled demo order. It takes about two minutes; no account or payment card is needed.
+Browse eight objects across furniture, ceramics, textiles, and lighting. Search or filter the collection, choose product variants, add an item to your bag, and complete guest checkout. No account is needed. The live demo uses Stripe test mode, so use the test card below; no real payment is taken.
 
 - **Public demo target:** [FORM & FIELD on GitHub Pages](https://iamzhangjinpeng.github.io/form-and-field-storefront/) — the included workflow can publish either the no-card demo or Stripe test checkout backed by Supabase Edge Functions.
 
@@ -102,7 +102,7 @@ npm run test:e2e
 
 Set `TEST_URL` for another server, or `PLAYWRIGHT_EXECUTABLE_PATH` for an existing Chromium installation. The browser script exercises catalog filtering/search, product options, cart persistence, quantities, checkout, success handling, mobile navigation, and layouts at 390px and 320px. It saves screenshots in `docs/images/`.
 
-Actual Stripe test payment execution requires the Supabase project secret and deployment access token to be configured. No payment credentials are included in this repository.
+The public demo currently has Stripe test payments enabled through Supabase Edge Functions. To test it, use the test card above; no payment credentials are included in this repository. The automated browser checks exercise the separate no-key demo mode.
 
 ## A closer look
 

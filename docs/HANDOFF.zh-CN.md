@@ -23,6 +23,6 @@ npm run dev
 
 在线演示：[FORM & FIELD](https://iamzhangjinpeng.github.io/form-and-field-storefront/)；源码：[GitHub 仓库](https://github.com/iamzhangjinpeng/form-and-field-storefront)。推荐演示路径：首页 → 商品列表 → 商品详情 → 选颜色/规格 → 加购 → 购物车改数量 → 填写虚构收货信息 → 演示确认。
 
-GitHub Pages 适合零密钥公开展示，只能运行演示结算。Vercel 运行完整 Next.js 服务端，可接入 Stripe 测试支付。部署步骤见英文 README，剩余验收项见 [项目待办](TODO.zh-CN.md)。
+在线版本使用 GitHub Pages + Supabase Edge Functions，已完成 Stripe 沙盒测试付款和成功页服务端验证。源码中的 Next.js API routes 也支持本地或 Vercel 服务端模式。部署步骤见英文 README，剩余验收项见 [项目待办](TODO.zh-CN.md)。
 
-本项目不含后台、真实库存物流、账号系统或生产订单数据库。GitHub Actions 可部署 Supabase `checkout` 与 `session` Edge Functions；添加 `SUPABASE_ACCESS_TOKEN` Actions Secret 后会随 Pages 工作流部署。Stripe 测试密钥和站点地址应保存在 Supabase Function Secrets 中。实际测试支付尚需部署后手动验收，不能把演示确认当作 Stripe 实测。
+本项目不含后台、真实库存物流、账号系统或生产订单数据库。GitHub Actions 已部署 Supabase `checkout` 与 `session` Edge Functions；Stripe 测试密钥和站点地址保存在 Supabase Function Secrets 中。浏览器已使用 Stripe 测试卡完成托管付款，成功页确认了 Checkout Session。此支付仅为沙盒测试，不会真实扣款或履约。

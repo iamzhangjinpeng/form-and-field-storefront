@@ -1,15 +1,17 @@
 # 项目待办
 
-截至 2026-10-21。GitHub Pages 站点已上线，Supabase Edge Functions 支付接入代码已加入。待办是配置 Supabase 部署凭据并完成一次 Stripe 测试付款，以及素材来源的可选对齐。
+截至 2026-10-21。GitHub Pages 站点已上线，Supabase Edge Functions 已部署。公开结账已显示 Stripe test mode，取消后返回和重新发起结账均已在浏览器验证。
 
-## 完成产品文档中的真实支付验收
+## 建议补充的验收
 
-- [ ] 在 GitHub 仓库 **Settings → Secrets and variables → Actions → Variables** 添加 `NEXT_PUBLIC_SUPABASE_URL` 和 `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`。
-- [ ] 在 GitHub 仓库 **Settings → Secrets and variables → Actions → Secrets** 添加 `SUPABASE_ACCESS_TOKEN`，让部署工作流可自动发布 Supabase Edge Functions。
-- [ ] 在 Supabase Edge Function Secrets 确认 `STRIPE_SECRET_KEY`（仅测试密钥）和 `SITE_URL=https://iamzhangjinpeng.github.io/form-and-field-storefront` 已配置。
-- [ ] 重新运行 GitHub Actions，确认 checkout/session 两个 Edge Functions 部署成功，随后 Pages 构建识别 Supabase Variables 并切换到 Stripe 测试模式。
-- [ ] 使用测试卡 `4242 4242 4242 4242` 完成一次托管支付，确认服务端验证成功后显示订单成功页；再验证取消返回结账页且购物车保留。
+- [x] 确认公开结账页显示 Stripe · test mode，并成功创建 Stripe 沙盒 Checkout。
+- [x] 在 Stripe 托管页点击返回商店；确认回到 `/checkout/?cancelled=true`、显示未付款提示、购物袋保留 1 件商品，并可再次点“Continue to test payment”重新打开 Stripe Checkout。测试期间未提交付款。
 
-## 可选的素材对齐
+## 可选的作品集优化
 
-- [ ] 若交付要求商品图全部来自 Unsplash/Pexels，将当前 AI 生成的商品主图替换为获准使用的图库素材，并在 [图片来源记录](image-provenance.md) 中登记来源与许可信息。当前生活方式照片及现有来源已记录。
+- [ ] 若严格按产品文档要求商品图全部来自 Unsplash/Pexels，将当前 AI 生成的商品主图替换为获准使用的图库素材，并在 [图片来源记录](image-provenance.md) 中登记来源与许可信息。现有商品图来源和 AI 生成记录均已披露。
+- [ ] 视 Upwork 展示需要，可再部署一个 Vercel 版本，展示 Next.js 服务端部署；当前免费的 GitHub Pages + Supabase Edge Functions 已完成 Stripe 测试支付演示。
+
+## 明确不在本 Demo 范围内
+
+真实收款、订单数据库、Stripe Webhook/自动履约、税费计算、库存物流、账号系统和后台管理不属于当前作品集验收范围。若将项目改成真实商店再另行规划。Vercel 部署和素材替换暂不作为当前必做项。
