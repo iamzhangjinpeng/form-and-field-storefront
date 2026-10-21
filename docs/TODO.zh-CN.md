@@ -4,7 +4,8 @@
 
 ## 完成产品文档中的真实支付验收
 
-- [ ] 在 GitHub 仓库 Actions Secrets 添加 `SUPABASE_ACCESS_TOKEN`，让部署工作流可自动发布 Supabase Edge Functions。
+- [ ] 在 GitHub 仓库 **Settings → Secrets and variables → Actions → Variables** 添加 `NEXT_PUBLIC_SUPABASE_URL` 和 `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`。
+- [ ] 在 GitHub 仓库 **Settings → Secrets and variables → Actions → Secrets** 添加 `SUPABASE_ACCESS_TOKEN`，让部署工作流可自动发布 Supabase Edge Functions。
 - [ ] 在 Supabase Edge Function Secrets 确认 `STRIPE_SECRET_KEY`（仅测试密钥）和 `SITE_URL=https://iamzhangjinpeng.github.io/form-and-field-storefront` 已配置。
 - [ ] 重新运行 GitHub Actions，确认 checkout/session 两个 Edge Functions 部署成功，随后 Pages 构建识别 Supabase Variables 并切换到 Stripe 测试模式。
 - [ ] 使用测试卡 `4242 4242 4242 4242` 完成一次托管支付，确认服务端验证成功后显示订单成功页；再验证取消返回结账页且购物车保留。
